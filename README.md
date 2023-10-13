@@ -1,3 +1,3 @@
 REST Countries API with color theme switcher
 
-- [Live Preview](#)
+- [Live Preview](https://classy-restcountriesapi.netlify.app/)
