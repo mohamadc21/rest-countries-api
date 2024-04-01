@@ -51,21 +51,21 @@ function Main() {
         <main>
             <div className="search-field">
                 <form onSubmit={searchCountry}>
-                    <ion-icon name="search-outline"></ion-icon>
-                    <input type="text" className="search" placeholder="Search for a country..." onChange={handleSearch} />
+                  <ion-icon name="search-outline"></ion-icon>
+                  <input type="text" className="search" placeholder="Search for a country..." onChange={handleSearch} />
                 </form>
                 <div className="filter">
-                    <header>
-                        <p>{filterRegion.current ? filterRegion.current : 'Filter by region'}</p>
-                        <ion-icon name="chevron-down-outline"></ion-icon>
-                    </header>
-                    <ul className="dropdown-list">
-                        <li className="dropdown-item" onClick={() => fetchByRegion('https://restcountries.com/v3.1/region/Africa', 'Africa')}>Africa</li>
-                        <li className="dropdown-item" onClick={() => fetchByRegion('https://restcountries.com/v3.1/region/America', 'America')}>America</li>
-                        <li className="dropdown-item" onClick={() => fetchByRegion('https://restcountries.com/v3.1/region/Asia', 'Asia')}>Asia</li>
-                        <li className="dropdown-item" onClick={() => fetchByRegion('https://restcountries.com/v3.1/region/Europe', 'Europe')}>Europe</li>
-                        <li className="dropdown-item" onClick={() => fetchByRegion('https://restcountries.com/v3.1/region/Oceania', 'Oceania')}>Oceania</li>
-                    </ul>
+                  <header>
+                      <p>{filterRegion.current ? filterRegion.current : 'Filter by region'}</p>
+                      <ion-icon name="chevron-down-outline"></ion-icon>
+                  </header>
+                  <select name="select">
+                    <option onClick={() => fetchByRegion('https://restcountries.com/v3.1/region/Africa', 'Africa')}>Africa</option>
+                    <option onClick={() => fetchByRegion('https://restcountries.com/v3.1/region/America', 'America')}>America</option>
+                    <option onClick={() => fetchByRegion('https://restcountries.com/v3.1/region/Asia', 'Asia')}>Asia</option>
+                    <option onClick={() => fetchByRegion('https://restcountries.com/v3.1/region/Europe', 'Europe')}>Europe</option>
+                    <option onClick={() => fetchByRegion('https://restcountries.com/v3.1/region/Oceania', 'Oceania')}>Oceania</option>
+                  </select>
                 </div>
             </div>
             <div className="countries">
