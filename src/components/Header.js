@@ -22,7 +22,7 @@ function Header() {
         <header className="top-header">
             <Link to='/'><h3>Where is the world?</h3></Link>
             <div className={`theme ${theme}`} onClick={toggleTheme}>
-                <ion-icon name="moon"></ion-icon> Dark Mode
+                <div style={{fontSize: '1.4rem', lineHeight: 0}}><ion-icon name={theme === 'light' ? 'moon' : 'sunny-outline'}></ion-icon></div> {theme === 'light' ? 'Dark Mode' : 'Light Mode'}
             </div>
         </header>
     )

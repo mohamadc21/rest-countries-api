@@ -107,18 +107,18 @@ main .search-field {
   position: relative;
 }
 
-.search-field .filter header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+.search-field .filter select {
   cursor: pointer;
   transition: .2s;
   background-color: var(--element-background);
+  color: white;
+  font-weight: 600;
   padding: 1rem 1.5rem;
+  border: none;
   border-radius: 8px;
 }
 
-.filter header:hover {
+.filter select:hover {
   opacity: 0.75;
 }
 
